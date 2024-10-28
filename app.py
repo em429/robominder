@@ -4,7 +4,7 @@ import asyncio
 import re
 from datetime import datetime, timedelta
 
-class ReminderBot(slixmpp.ClientXMPP):
+class RoboMinder(slixmpp.ClientXMPP):
     def __init__(self):
         # Get the account and password from environment variables
         account = os.getenv('ROBOMINDER_ACCOUNT')
@@ -119,7 +119,7 @@ class ReminderBot(slixmpp.ClientXMPP):
 
 if __name__ == '__main__':
     try:
-        xmpp = ReminderBot()
+        xmpp = RoboMinder()
         xmpp.register_plugin('xep_0030') # Service Discovery
         xmpp.register_plugin('xep_0199') # XMPP Ping
         xmpp.connect()
