@@ -15,5 +15,5 @@ docker build . -t robominder
 
 cp .env.example .env
 # Update .env with your credentials
-docker run robominder --env-file .env
+docker run -d --restart always --env-file .env robominder
 ```
